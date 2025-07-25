@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,31 +27,31 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
-        
+
         .hero-section {
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
-        
+
         .room-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        
+
         .testimonial-card {
             transition: all 0.3s ease;
         }
-        
+
         .testimonial-card:hover {
             transform: scale(1.05);
         }
-        
+
         .dark .hero-section {
             background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
         }
-        
+
         .parallax {
             background-attachment: fixed;
             background-position: center;
@@ -59,14 +60,22 @@
         }
     </style>
 </head>
+
 <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300 font-sans">
+
+    
     <!-- Dark Mode Toggle -->
-    <div class="fixed right-4 top-4 z-50">
-        <button id="darkModeToggle" class="bg-primary text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition-all">
-            <i class="fas fa-moon dark:hidden"></i>
-            <i class="fas fa-sun hidden dark:block"></i>
+    <div class="fixed right-5 bottom-16 z-50">
+        <button id="darkModeToggle"
+            class="bg-primary text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition-all flex items-center justify-center w-12 h-12">
+            <i class="fas fa-moon dark:hidden text-xl"></i>
+            <i class="fas fa-sun hidden dark:block text-xl"></i>
         </button>
     </div>
+
+
+
+
 
     <!-- Navigation -->
     <nav class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-40 transition-all duration-300">
@@ -77,44 +86,84 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-center space-x-8">
-                        <a href="#home" class="text-secondary dark:text-white hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
-                        <a href="#rooms" class="text-secondary dark:text-white hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Rooms</a>
-                        <a href="#amenities" class="text-secondary dark:text-white hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Amenities</a>
-                        <a href="#dining" class="text-secondary dark:text-white hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Dining</a>
-                        <a href="#contact" class="text-secondary dark:text-white hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
-                        <a href="#book" class="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-opacity-90 transition-colors">Book Now</a>
+                        <a href="#home"
+                            class="text-secondary dark:text-white hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#rooms"
+                            class="text-secondary dark:text-white hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Rooms</a>
+                        <a href="#amenities"
+                            class="text-secondary dark:text-white hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Amenities</a>
+                        <a href="#dining"
+                            class="text-secondary dark:text-white hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Dining</a>
+                        <a href="#contact"
+                            class="text-secondary dark:text-white hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                        <a href="#book"
+                            class="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-opacity-90 transition-colors">Book
+                            Now</a>
+
                     </div>
                 </div>
+
+
+
                 <div class="md:hidden">
-                    <button id="mobileMenuButton" class="text-secondary dark:text-white hover:text-primary focus:outline-none">
+                    <button id="mobileMenuButton"
+                        class="text-secondary dark:text-white hover:text-primary focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
             </div>
+
         </div>
-        <!-- Mobile menu -->
+
+
+
+
+
+
+
+        <!-- Mobile Menu -->
+
         <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-lg">
+
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-secondary dark:text-white hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
-                <a href="#rooms" class="block px-3 py-2 rounded-md text-base font-medium text-secondary dark:text-white hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-700">Rooms</a>
-                <a href="#amenities" class="block px-3 py-2 rounded-md text-base font-medium text-secondary dark:text-white hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-700">Amenities</a>
-                <a href="#dining" class="block px-3 py-2 rounded-md text-base font-medium text-secondary dark:text-white hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-700">Dining</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-secondary dark:text-white hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-700">Contact</a>
-                <a href="#book" class="block px-3 py-2 rounded-md text-base font-medium bg-primary text-white hover:bg-opacity-90">Book Now</a>
+
+                <a href="#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-secondary dark:text-white hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
+                <a href="#rooms"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-secondary dark:text-white hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-700">Rooms</a>
+                <a href="#amenities"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-secondary dark:text-white hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-700">Amenities</a>
+                <a href="#dining"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-secondary dark:text-white hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-700">Dining</a>
+                <a href="#contact"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-secondary dark:text-white hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-700">Contact</a>
+                <a href="#book"
+                    class="block px-3 py-2 rounded-md text-base font-medium bg-primary text-white hover:bg-opacity-90">Book
+                    Now</a>
             </div>
+
         </div>
+
+
     </nav>
+
 
     <!-- Hero Section -->
     <section id="home" class="hero-section h-screen flex items-center justify-center text-center pt-20">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6">Vivanta Residency Hotel</h1>
-            <p class="text-xl md:text-2xl text-white mb-8 italic">"Crafting Moments, Inspiring Journeys: Welcome to Vivanta Residency Hotel, Where Every Stay Is a Story Worth Telling."</p>
+            <p class="text-xl md:text-2xl text-white mb-8 italic">"Crafting Moments, Inspiring Journeys: Welcome to
+                Vivanta Residency Hotel, Where Every Stay Is a Story Worth Telling."</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#book" class="bg-primary hover:bg-opacity-90 text-white font-medium py-3 px-6 rounded-md transition-colors">Book Your Stay</a>
-                <a href="#rooms" class="bg-white hover:bg-gray-100 text-secondary font-medium py-3 px-6 rounded-md transition-colors">Explore Rooms</a>
+                <a href="#book"
+                    class="bg-primary hover:bg-opacity-90 text-white font-medium py-3 px-6 rounded-md transition-colors">Book
+                    Your Stay</a>
+                <a href="#rooms"
+                    class="bg-white hover:bg-gray-100 text-secondary font-medium py-3 px-6 rounded-md transition-colors">Explore
+                    Rooms</a>
             </div>
         </div>
     </section>
@@ -124,32 +173,43 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:flex lg:items-center lg:justify-between">
                 <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
-                    <h2 class="text-3xl font-serif font-bold text-secondary dark:text-white mb-6">Experience Luxury Redefined</h2>
+                    <h2 class="text-3xl font-serif font-bold text-secondary dark:text-white mb-6">Experience Luxury
+                        Redefined</h2>
                     <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                        Nestled in the heart of the city, Vivanta Residency Hotel offers an unparalleled experience of comfort and luxury. Our commitment to excellence ensures that every guest enjoys personalized service and world-class amenities.
+                        Nestled in the heart of the city, Vivanta Residency Hotel offers an unparalleled experience of
+                        comfort and luxury. Our commitment to excellence ensures that every guest enjoys personalized
+                        service and world-class amenities.
                     </p>
                     <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                        From the moment you step into our elegant lobby to the time you retire in our plush accommodations, every detail is crafted to perfection, creating memories that last a lifetime.
+                        From the moment you step into our elegant lobby to the time you retire in our plush
+                        accommodations, every detail is crafted to perfection, creating memories that last a lifetime.
                     </p>
-                    <a href="#contact" class="inline-flex items-center text-primary font-medium hover:text-opacity-80 transition-colors">
+                    <a href="#contact"
+                        class="inline-flex items-center text-primary font-medium hover:text-opacity-80 transition-colors">
                         Learn More About Us
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                         </svg>
                     </a>
                 </div>
                 <div class="lg:w-1/2 grid grid-cols-2 gap-4">
                     <div class="overflow-hidden rounded-lg shadow-md">
-                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Hotel Lobby" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                            alt="Hotel Lobby" class="w-full h-full object-cover">
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md">
-                        <img src="https://plus.unsplash.com/premium_photo-1661964071015-d97428970584?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aG90ZWx8ZW58MHx8MHx8fDA%3D" alt="Hotel Pool" class="w-full h-full object-cover">
+                        <img src="https://plus.unsplash.com/premium_photo-1661964071015-d97428970584?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aG90ZWx8ZW58MHx8MHx8fDA%3D"
+                            alt="Hotel Pool" class="w-full h-full object-cover">
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md">
-                        <img src="https://images.unsplash.com/photo-1565031491910-e57fac031c41?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80" alt="Hotel Restaurant" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1565031491910-e57fac031c41?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80"
+                            alt="Hotel Restaurant" class="w-full h-full object-cover">
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md">
-                        <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Hotel Spa" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+                            alt="Hotel Spa" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
@@ -160,82 +220,107 @@
     <section id="rooms" class="py-20 bg-white dark:bg-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-serif font-bold text-secondary dark:text-white mb-4">Our Luxurious Accommodations</h2>
+                <h2 class="text-3xl font-serif font-bold text-secondary dark:text-white mb-4">Our Luxurious
+                    Accommodations</h2>
                 <p class="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300">
-                    Each of our rooms and suites is designed to provide the ultimate in comfort and style, with thoughtful amenities and breathtaking views.
+                    Each of our rooms and suites is designed to provide the ultimate in comfort and style, with
+                    thoughtful amenities and breathtaking views.
                 </p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Room 1 -->
-                <div class="room-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-all duration-300">
+                <div
+                    class="room-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-all duration-300">
                     <div class="relative overflow-hidden h-64">
-                        <img src="https://sitecore-cd-imgr.shangri-la.com/MediaFiles/9/8/4/%7B984A8BD0-FC33-4BC1-BF9A-661E56C4412F%7D72d8e1b8f63648b3a21cabed0642f70c.jpg" alt="Deluxe Room" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                        <img src="https://sitecore-cd-imgr.shangri-la.com/MediaFiles/9/8/4/%7B984A8BD0-FC33-4BC1-BF9A-661E56C4412F%7D72d8e1b8f63648b3a21cabed0642f70c.jpg"
+                            alt="Deluxe Room"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div
+                            class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
                             Best Seller
                         </div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-serif font-bold text-secondary dark:text-white mb-2">Deluxe Room</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Spacious and elegantly appointed with modern amenities and stunning city views.</p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Spacious and elegantly appointed with modern
+                            amenities and stunning city views.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-primary font-bold text-lg">$199/night</span>
                             <a href="#book" class="text-primary hover:text-opacity-80 font-medium flex items-center">
                                 Book Now
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                 </svg>
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Room 2 -->
-                <div class="room-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-all duration-300">
+                <div
+                    class="room-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-all duration-300">
                     <div class="relative overflow-hidden h-64">
-                        <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Executive Suite" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                            alt="Executive Suite"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-serif font-bold text-secondary dark:text-white mb-2">Executive Suite</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Luxurious living space with separate bedroom and living area, perfect for extended stays.</p>
+                        <h3 class="text-xl font-serif font-bold text-secondary dark:text-white mb-2">Executive Suite
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Luxurious living space with separate bedroom
+                            and living area, perfect for extended stays.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-primary font-bold text-lg">$349/night</span>
                             <a href="#book" class="text-primary hover:text-opacity-80 font-medium flex items-center">
                                 Book Now
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                 </svg>
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Room 3 -->
-                <div class="room-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-all duration-300">
+                <div
+                    class="room-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-all duration-300">
                     <div class="relative overflow-hidden h-64">
-                        <img src="https://www.novotel-visakhapatnam.com/wp-content/uploads/sites/24/2022/12/Presidential-suite-2200x1200.jpg" alt="Presidential Suite" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">
+                        <img src="https://www.novotel-visakhapatnam.com/wp-content/uploads/sites/24/2022/12/Presidential-suite-2200x1200.jpg"
+                            alt="Presidential Suite"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div
+                            class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">
                             Premium
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-serif font-bold text-secondary dark:text-white mb-2">Presidential Suite</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">The epitome of luxury with expansive space, premium amenities, and panoramic views.</p>
+                        <h3 class="text-xl font-serif font-bold text-secondary dark:text-white mb-2">Presidential Suite
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">The epitome of luxury with expansive space,
+                            premium amenities, and panoramic views.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-primary font-bold text-lg">$599/night</span>
                             <a href="#book" class="text-primary hover:text-opacity-80 font-medium flex items-center">
                                 Book Now
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                 </svg>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-12">
-                <a href="#rooms" class="inline-block bg-primary hover:bg-opacity-90 text-white font-medium py-3 px-8 rounded-md transition-colors">
+                <a href="#rooms"
+                    class="inline-block bg-primary hover:bg-opacity-90 text-white font-medium py-3 px-8 rounded-md transition-colors">
                     View All Room Types
                 </a>
             </div>
@@ -251,42 +336,54 @@
                     We provide exceptional facilities and services to ensure your stay is nothing short of perfect.
                 </p>
             </div>
-            
+
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Amenity 1 -->
-                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div
+                    class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">
+                    <div
+                        class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-utensils text-primary text-2xl"></i>
                     </div>
                     <h3 class="text-lg font-medium text-secondary dark:text-white mb-2">Fine Dining</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Experience culinary excellence at our award-winning restaurants.</p>
+                    <p class="text-gray-600 dark:text-gray-300">Experience culinary excellence at our award-winning
+                        restaurants.</p>
                 </div>
-                
+
                 <!-- Amenity 2 -->
-                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div
+                    class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">
+                    <div
+                        class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-spa text-primary text-2xl"></i>
                     </div>
                     <h3 class="text-lg font-medium text-secondary dark:text-white mb-2">Spa & Wellness</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Rejuvenate your senses with our luxurious spa treatments.</p>
+                    <p class="text-gray-600 dark:text-gray-300">Rejuvenate your senses with our luxurious spa
+                        treatments.</p>
                 </div>
-                
+
                 <!-- Amenity 3 -->
-                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div
+                    class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">
+                    <div
+                        class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-swimming-pool text-primary text-2xl"></i>
                     </div>
                     <h3 class="text-lg font-medium text-secondary dark:text-white mb-2">Infinity Pool</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Take a refreshing dip in our stunning rooftop infinity pool.</p>
+                    <p class="text-gray-600 dark:text-gray-300">Take a refreshing dip in our stunning rooftop infinity
+                        pool.</p>
                 </div>
-                
+
                 <!-- Amenity 4 -->
-                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div
+                    class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">
+                    <div
+                        class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-dumbbell text-primary text-2xl"></i>
                     </div>
                     <h3 class="text-lg font-medium text-secondary dark:text-white mb-2">Fitness Center</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Stay active with our state-of-the-art fitness equipment.</p>
+                    <p class="text-gray-600 dark:text-gray-300">Stay active with our state-of-the-art fitness equipment.
+                    </p>
                 </div>
             </div>
         </div>
@@ -296,16 +393,18 @@
     <section id="dining" class="py-20 bg-white dark:bg-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-serif font-bold text-secondary dark:text-white mb-4">Exquisite Dining Experiences</h2>
+                <h2 class="text-3xl font-serif font-bold text-secondary dark:text-white mb-4">Exquisite Dining
+                    Experiences</h2>
                 <p class="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300">
                     Savor the flavors of our carefully crafted menus prepared by our world-class chefs.
                 </p>
             </div>
-            
+
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Restaurant 1 -->
                 <div class="relative rounded-lg overflow-hidden shadow-lg h-96">
-                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="The Grand Restaurant" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                        alt="The Grand Restaurant" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
                     <div class="absolute bottom-0 left-0 p-6 text-white">
                         <h3 class="text-2xl font-serif font-bold mb-2">The Grand Restaurant</h3>
@@ -316,10 +415,11 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Restaurant 2 -->
                 <div class="relative rounded-lg overflow-hidden shadow-lg h-96">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Sky Lounge" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
+                        alt="Sky Lounge" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
                     <div class="absolute bottom-0 left-0 p-6 text-white">
                         <h3 class="text-2xl font-serif font-bold mb-2">Sky Lounge</h3>
@@ -330,10 +430,11 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Restaurant 3 -->
                 <div class="relative rounded-lg overflow-hidden shadow-lg h-96">
-                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="La Terrazza" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                        alt="La Terrazza" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
                     <div class="absolute bottom-0 left-0 p-6 text-white">
                         <h3 class="text-2xl font-serif font-bold mb-2">La Terrazza</h3>
@@ -349,7 +450,8 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-20 bg-gray-50 dark:bg-gray-800 parallax" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112c3b796f4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');">
+    <section class="py-20 bg-gray-50 dark:bg-gray-800 parallax"
+        style="background-image: url('https://images.unsplash.com/photo-1520250497591-112c3b796f4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-serif font-bold text-secondary dark:text-white mb-4">What Our Guests Say</h2>
@@ -357,13 +459,14 @@
                     Hear from our valued guests about their unforgettable experiences at Vivanta Residency.
                 </p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Testimonial 1 -->
                 <div class="testimonial-card bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
                     <div class="flex items-center mb-4">
                         <div class="flex-shrink-0">
-                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/32.jpg"
+                                alt="Sarah Johnson">
                         </div>
                         <div class="ml-4">
                             <h4 class="text-lg font-medium text-secondary dark:text-white">Sarah Johnson</h4>
@@ -377,15 +480,18 @@
                         </div>
                     </div>
                     <p class="text-gray-600 dark:text-gray-300 italic">
-                        "The service at Vivanta Residency was exceptional. From the moment we arrived, we were treated like royalty. The room was spacious and luxurious, and the views were breathtaking. We'll definitely be back!"
+                        "The service at Vivanta Residency was exceptional. From the moment we arrived, we were treated
+                        like royalty. The room was spacious and luxurious, and the views were breathtaking. We'll
+                        definitely be back!"
                     </p>
                 </div>
-                
+
                 <!-- Testimonial 2 -->
                 <div class="testimonial-card bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
                     <div class="flex items-center mb-4">
                         <div class="flex-shrink-0">
-                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/men/75.jpg" alt="Michael Chen">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/men/75.jpg"
+                                alt="Michael Chen">
                         </div>
                         <div class="ml-4">
                             <h4 class="text-lg font-medium text-secondary dark:text-white">Michael Chen</h4>
@@ -399,15 +505,18 @@
                         </div>
                     </div>
                     <p class="text-gray-600 dark:text-gray-300 italic">
-                        "I've stayed at many luxury hotels around the world, but Vivanta Residency stands out for its attention to detail. The staff anticipated our every need, and the dining options were superb. Truly a memorable experience."
+                        "I've stayed at many luxury hotels around the world, but Vivanta Residency stands out for its
+                        attention to detail. The staff anticipated our every need, and the dining options were superb.
+                        Truly a memorable experience."
                     </p>
                 </div>
-                
+
                 <!-- Testimonial 3 -->
                 <div class="testimonial-card bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg">
                     <div class="flex items-center mb-4">
                         <div class="flex-shrink-0">
-                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Rodriguez">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/68.jpg"
+                                alt="Emma Rodriguez">
                         </div>
                         <div class="ml-4">
                             <h4 class="text-lg font-medium text-secondary dark:text-white">Emma Rodriguez</h4>
@@ -421,7 +530,9 @@
                         </div>
                     </div>
                     <p class="text-gray-600 dark:text-gray-300 italic">
-                        "Our anniversary stay at Vivanta Residency was perfect in every way. The romantic dinner setup, the champagne, and the rose petals on the bed made it so special. Thank you for helping us create beautiful memories!"
+                        "Our anniversary stay at Vivanta Residency was perfect in every way. The romantic dinner setup,
+                        the champagne, and the rose petals on the bed made it so special. Thank you for helping us
+                        create beautiful memories!"
                     </p>
                 </div>
             </div>
@@ -437,47 +548,68 @@
                     <h2 class="text-3xl font-serif font-bold text-secondary dark:text-white mb-6">Contact Us</h2>
                     <form class="space-y-6">
                         <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Full Name</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white">
+                            <label for="name"
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Full
+                                Name</label>
+                            <input type="text" id="name" name="name"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white">
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email Address</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white">
+                            <label for="email"
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email
+                                Address</label>
+                            <input type="email" id="email" name="email"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white">
                         </div>
                         <div>
-                            <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white">
+                            <label for="phone"
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Phone
+                                Number</label>
+                            <input type="tel" id="phone" name="phone"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white">
                         </div>
                         <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your Message</label>
-                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white"></textarea>
+                            <label for="message"
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your
+                                Message</label>
+                            <textarea id="message" name="message" rows="4"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white"></textarea>
                         </div>
                         <div>
-                            <button type="submit" class="w-full bg-primary hover:bg-opacity-90 text-white font-medium py-3 px-6 rounded-md transition-colors">
+                            <button type="submit"
+                                class="w-full bg-primary hover:bg-opacity-90 text-white font-medium py-3 px-6 rounded-md transition-colors">
                                 Send Message
                             </button>
                         </div>
                     </form>
                 </div>
-                
+
                 <!-- Booking Form -->
                 <div id="book">
                     <h2 class="text-3xl font-serif font-bold text-secondary dark:text-white mb-6">Book Your Stay</h2>
                     <form class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label for="check-in" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Check-in Date</label>
-                                <input type="date" id="check-in" name="check-in" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white">
+                                <label for="check-in"
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Check-in
+                                    Date</label>
+                                <input type="date" id="check-in" name="check-in"
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white">
                             </div>
                             <div>
-                                <label for="check-out" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Check-out Date</label>
-                                <input type="date" id="check-out" name="check-out" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white">
+                                <label for="check-out"
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Check-out
+                                    Date</label>
+                                <input type="date" id="check-out" name="check-out"
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white">
                             </div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label for="adults" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Adults</label>
-                                <select id="adults" name="adults" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white">
+                                <label for="adults"
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Adults</label>
+                                <select id="adults" name="adults"
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -485,8 +617,10 @@
                                 </select>
                             </div>
                             <div>
-                                <label for="children" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Children</label>
-                                <select id="children" name="children" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white">
+                                <label for="children"
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Children</label>
+                                <select id="children" name="children"
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white">
                                     <option value="0">0</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -495,26 +629,31 @@
                             </div>
                         </div>
                         <div>
-                            <label for="room-type" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Room Type</label>
-                            <select id="room-type" name="room-type" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white">
+                            <label for="room-type"
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Room
+                                Type</label>
+                            <select id="room-type" name="room-type"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white">
                                 <option value="deluxe">Deluxe Room</option>
                                 <option value="executive">Executive Suite</option>
                                 <option value="presidential">Presidential Suite</option>
                             </select>
                         </div>
                         <div>
-                            <button type="submit" class="w-full bg-primary hover:bg-opacity-90 text-white font-medium py-3 px-6 rounded-md transition-colors">
+                            <button type="submit"
+                                class="w-full bg-primary hover:bg-opacity-90 text-white font-medium py-3 px-6 rounded-md transition-colors">
                                 Check Availability
                             </button>
                         </div>
                     </form>
-                    
+
                     <div class="mt-8 bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
                         <h3 class="text-lg font-medium text-secondary dark:text-white mb-4">Contact Information</h3>
                         <div class="space-y-4">
                             <div class="flex items-start">
                                 <i class="fas fa-map-marker-alt text-primary mt-1 mr-3"></i>
-                                <span class="text-gray-600 dark:text-gray-300">123 Luxury Avenue, Downtown District, Cityville 10001</span>
+                                <span class="text-gray-600 dark:text-gray-300">123 Luxury Avenue, Downtown District,
+                                    Cityville 10001</span>
                             </div>
                             <div class="flex items-center">
                                 <i class="fas fa-phone-alt text-primary mr-3"></i>
@@ -535,10 +674,13 @@
     <section class="py-16 bg-primary text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-2xl font-serif font-bold mb-4">Stay Updated</h2>
-            <p class="mb-8 max-w-2xl mx-auto">Subscribe to our newsletter for exclusive offers, events, and news from Vivanta Residency.</p>
+            <p class="mb-8 max-w-2xl mx-auto">Subscribe to our newsletter for exclusive offers, events, and news from
+                Vivanta Residency.</p>
             <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
-                <button type="submit" class="bg-white text-primary font-medium px-6 py-3 rounded-md hover:bg-opacity-90 transition-colors">
+                <input type="email" placeholder="Your email address"
+                    class="flex-grow px-4 py-3 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
+                <button type="submit"
+                    class="bg-white text-primary font-medium px-6 py-3 rounded-md hover:bg-opacity-90 transition-colors">
                     Subscribe
                 </button>
             </form>
@@ -559,8 +701,10 @@
                     <h4 class="text-lg font-medium mb-4">Quick Links</h4>
                     <ul class="space-y-2">
                         <li><a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="#rooms" class="text-gray-300 hover:text-white transition-colors">Rooms & Suites</a></li>
-                        <li><a href="#amenities" class="text-gray-300 hover:text-white transition-colors">Amenities</a></li>
+                        <li><a href="#rooms" class="text-gray-300 hover:text-white transition-colors">Rooms & Suites</a>
+                        </li>
+                        <li><a href="#amenities" class="text-gray-300 hover:text-white transition-colors">Amenities</a>
+                        </li>
                         <li><a href="#dining" class="text-gray-300 hover:text-white transition-colors">Dining</a></li>
                         <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
                     </ul>
@@ -604,7 +748,6 @@
             </div>
             <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
                 <p>&copy; 2025 Vivanta Residency Hotel. All rights reserved.</p>
-                <p><b>Made By Gaurav Chaudhary</b>.</p>
             </div>
         </div>
     </footer>
@@ -613,38 +756,38 @@
         // Dark Mode Toggle
         const darkModeToggle = document.getElementById('darkModeToggle');
         const html = document.documentElement;
-        
+
         // Check for saved user preference
         if (localStorage.getItem('darkMode') === 'true') {
             html.classList.add('dark');
         }
-        
+
         darkModeToggle.addEventListener('click', () => {
             html.classList.toggle('dark');
             localStorage.setItem('darkMode', html.classList.contains('dark'));
         });
-        
+
         // Mobile Menu Toggle
         const mobileMenuButton = document.getElementById('mobileMenuButton');
         const mobileMenu = document.getElementById('mobileMenu');
-        
+
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-        
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     // Close mobile menu if open
                     mobileMenu.classList.add('hidden');
-                    
+
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
@@ -652,7 +795,7 @@
                 }
             });
         });
-        
+
         // Add shadow to navbar on scroll
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
@@ -664,4 +807,5 @@
         });
     </script>
 </body>
+
 </html>
